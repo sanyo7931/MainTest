@@ -22,7 +22,17 @@ namespace CalculatorDemo
         }
         public float Div(int n1, int n2)
         {
-            return (float)n1 / (float)n2;
+            float result = -1;
+            try
+            {               
+                result = (float)n1 / (float)n2;
+            }           
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp.ToString());
+                throw;
+            }            
+            return result;
         }
     }
 }
